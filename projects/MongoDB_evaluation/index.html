@@ -114,20 +114,14 @@ table, th, td {
 
     <P><H2>Collections</H2></P>
     <TABLE>
-      <TR>
-        <TH>Database</TH>
-        <TH>Collection</TH>
-        <TH>Purpose(s)</TH>
-      </TR>
-      <TR>
-        <TD>retail</TD><TD>customer</TD><TD>Joined to order & order_line</TD>
-        <TD>retail</TD><TD>order</TD><TD>Joined to order_line.  Contains data for the order as a whole (e.g., customer ID , shipping_address) </TD>
-        <TD>retail</TD><TD>order_line</TD><TD>Lowest level of the retail transaction log.</TD>
-        <TD>retail</TD><TD>order_line_denormalized</TD><TD>Lowest level of the retail transaction log. Added </TD>
-        <TD>banking</TD><TD>TBD</TD><TD>As needed for multi-document ACID experiments. </TD>
-        <TD>hr</TD><TD>employee</TD><TD>Joined to timecard_punch.RBAC experimentation.</TD>
-        <TD>hr</TD><TD>timecard_punch.</TD><TD>Voluminous data for write throughput testing.</TD>
-      </TR>
+        <TR> <TH>Database</TH> <TH>Collection</TH><TH>Purpose(s)</TH></TR>
+        <TR><TD>retail</TD><TD>customer</TD><TD>Joined to order & order_line</TD></TR>
+        <TR><TD>retail</TD><TD>order</TD><TD>Joined to order_line.  Contains data for the order as a whole (e.g., customer ID , shipping_address) </TD></TR>
+        <TR><TD>retail</TD><TD>order_line</TD><TD>Lowest level of the retail transaction log.</TD></TR>
+        <TR><TD>retail</TD><TD>order_line_denormalized</TD><TD>Lowest level of the retail transaction log. Added </TD></TR>
+        <TR><TD>banking</TD><TD>TBD</TD><TD>As needed for multi-document ACID experiments. </TD></TR>
+        <TR><TD>hr</TD><TD>employee</TD><TD>Joined to timecard_punch.RBAC experimentation.</TD></TR>
+        <TR><TD>hr</TD><TD>timecard_punch.</TD><TD>Voluminous data for write throughput testing.</TD> </TR>
     </TABLE>
 
     <P><H2>To Consider</H2></P>
