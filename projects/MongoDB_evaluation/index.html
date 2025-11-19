@@ -41,7 +41,8 @@ table, th, td {
   <P><H2>VM Specifications for Cluster Roles and Evaluation/Testing</H2></P>
     <P>Applicable to all VM roles:</P>
     <UL>
-      <LI> Use preemtible VMs. Use a tag for the project (MongoDB) for all VMs defined.</LI>
+      <LI> Use preemtible VMs. </LI>
+      <LI> Use a tag for the project (MongoDB) for all VMs defined.</LI>
       <LI> Use a tag for the role for all VMs defined. Allow them to be monitored by this role in GCP dashboards.</LI>
       <LI> Ensure all disks are deleted when the VM is deleted. (May not be the default.)</LI>
       <LI> Use a Debian OS image.</LI>
@@ -56,6 +57,7 @@ table, th, td {
       <TH>Memory</TH>
       <TH>Disk Size (Type)</TH>
       <TH>Needed Software</TH>
+      <TH>systemctl Entries</TH></TH>
     </TR>
   <TR>
       <TD>Config Server Replica Set</TD>
@@ -65,6 +67,7 @@ table, th, td {
       <TD style="text-align:center">3 GB<BR>(1GB/vCPU)<BR>(2GB for OS)</TD>
       <TD style="text-align:center">20 GB<BR>(SSD)</TD>
      <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
+     <TD>mongod (unique config file)</TD>
     </TR>
       <TR>
       <TD>Data Nodes</TD>
@@ -74,6 +77,7 @@ table, th, td {
       <TD style="text-align:center">10 GB<BR>(4GB/vCPU)<BR>(2GB for OS)</TD>
       <TD style="text-align:center">100 GB<BR> (SSD)</TD>
      <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
+        <TD>mongod</TD>
     </TR>
   <TR>
       <TD>mongos</TD>
@@ -82,7 +86,8 @@ table, th, td {
       <TD style="text-align:center">1</TD>
       <TD style="text-align:center">3 GB<BR>(1GB/vCPU)<BR>(2GB for OS)</TD>
       <TD style="text-align:center">20 GB<BR>(HDD)</TD>
-     <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
+     <TD>mongodb-org (meta package)<BR>gnupg and curl</TD><
+      <TD>mongos</TD>
     </TR>
      <TR>
       <TD>Data Producer(s)</TD>
@@ -92,6 +97,7 @@ table, th, td {
       <TD style="text-align:center">2 GB</TD>
       <TD style="text-align:center">20 GB<BR>(HDD)</TD>
       <TD>pymongo<BR>Project Code Repository</TD>
+       <TD>TBD</TD>
      </TR>
     <TR>
       <TD>Data Consumer(s)</TD>
@@ -101,6 +107,7 @@ table, th, td {
       <TD style="text-align:center">2 GB</TD>
       <TD style="text-align:center">20 GB<BR>(HDD)</TD>
       <TD>pymongo<BR>Project Code Repository</TD>
+      <TD>TBD</TD>
     </TR>
     
   </TABLE>
