@@ -32,6 +32,14 @@ table, th, td {
     Diagram for Evaluation Cluster</a> | </P>
 
   <P><H2>VM Specifications for Cluster Roles and Evaluation/Testing</H2></P>
+    <P>Applicable to all VM roles:</P>
+    <UL>
+      <LI> Use a tag for the project (MongoDB) for all VMs defined.</LI>
+      <LI> Use a tag for the role for all VMs defined. Allow them to be monitored by this role in GCP dashboards.</LI>
+      <LI> Ensure all disks are deleted when the VM is deleted. (May not be the default.)</LI>
+      <LI> Use a Debian OS image.</LI>
+      <LI> Only use Terraform (gcloud behind the scenes) and ansible. Do not run commands maually. Do not login to the VMs except to troubleshoot issues.</LI>
+    </UL>
   <TABLE>
     <TR>
       <TH>Category</TH>
@@ -94,7 +102,6 @@ table, th, td {
     <UL>
       <LI>Monitor Memory Usage across the MongoDB cluster's VMs - Monitoring memory usage across a group of servers in GCP requires two main steps: installing the Ops Agent on your VMs to collect the OS-level memory metrics and then creating a custom dashboard in Cloud Monitoring to visualize the aggregated data.
       </LI>
-      <LI>VM / Resource - Labels - Ensure there are tags for the project and the various VM roles upon VM build in Terraform.  I will need to be able to monitor CPU and memory for groups of servers in the various roles.</LI>
     </UL>
     </BODY>
 </HTML>
