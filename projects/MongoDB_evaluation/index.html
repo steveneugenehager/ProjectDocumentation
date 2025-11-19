@@ -112,11 +112,31 @@ table, th, td {
     
   </TABLE>
 
+    <P><H2>Collections</H2></P>
+    <TABLE>
+      <TR>
+        <TH>Database</TH>
+        <TH>Collection</TH>
+        <TH>Purpose(s)</TH>
+      </TR>
+      <TR>
+        <TD>retail</TD><TD>customer</TD><TD>Joined to order & order_line</TD>
+        <TD>retail</TD><TD>order</TD><TD>Joined to order_line.  Contains data for the order as a whole (e.g., customer ID , shipping_address) </TD>
+        <TD>retail</TD><TD>order_line</TD><TD>Lowest level of the retail transaction log.</TD>
+        <TD>retail</TD><TD>order_line_denormalized</TD><TD>Lowest level of the retail transaction log. Added </TD>
+        <TD>banking</TD><TD>TBD</TD><TD>As needed for multi-document ACID experiments. </TD>
+        <TD>hr</TD><TD>employee</TD><TD>Joined to timecard_punch.RBAC experimentation.</TD>
+        <TD>hr</TD><TD>timecard_punch.</TD><TD>Voluminous data for write throughput testing.</TD>
+      </TR>
+    </TABLE>
+
     <P><H2>To Consider</H2></P>
     <UL>
       <LI>Monitor Memory Usage across the MongoDB cluster's VMs - Monitoring memory usage across a group of servers in GCP requires two main steps: installing the Ops Agent on your VMs to collect the OS-level memory metrics and then creating a custom dashboard in Cloud Monitoring to visualize the aggregated data.
       </LI>
       <LI>Can all processes be started automatically when each VM boots?</LI>
+      <LI>Investigate whether order_line needs to be completely denormalized or we can join order_line, order , and customer.</LI>
+      <LI>Verify documents can be updated. For example, a customer's name, shipping address(es)</LI>
     </UL>
     </BODY>
 </HTML>
