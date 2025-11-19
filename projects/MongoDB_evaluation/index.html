@@ -24,7 +24,7 @@ table, th, td {
     <LI>Be prepared to compare/contrast MongoDB with other future datastores to be evaluated (e.g., Cassandra, Redis, BigTable).</LI>
     <LI>Using Terraform for IaC operations.</LI>
     <LI>Using Ansible for server configuration.</LI>
-    <LI>Using Python and libraries to simulate application write and ready activity on MongoDB.</LI>
+    <LI>Using Python and libraries to simulate application write and read activity on MongoDB.</LI>
   </OL>
 
   <P>
@@ -37,7 +37,7 @@ table, th, td {
       <TH>Category</TH>
       <TH>Naming Convention</TH>
       <TH>VM Count</TH>
-      <TH>Cores</TH>
+      <TH>vCPU</TH>
       <TH>Memory</TH>
       <TH>Disk Size (Type)</TH>
       <TH>Needed Software</TH>
@@ -47,8 +47,8 @@ table, th, td {
       <TD>mongo-config-server-n</TD>
       <TD style="text-align:center">3</TD>
       <TD style="text-align:right">1</TD>
-<TD style="text-align:right">2 GB</TD>
-    <TD style="text-align:center">20 GB<BR>(SSD)</TD>
+      <TD style="text-align:center">3 GB<BR>(1GB/vCPU)<BR>(2GB for OS)</TD>
+      <TD style="text-align:center">20 GB<BR>(SSD)</TD>
      <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
       <TR>
@@ -56,16 +56,16 @@ table, th, td {
       <TD>mongo-data-node-n</TD>
       <TD style="text-align:center">2 (or 3) per shard<BR>Planning 2 shards<BR>4 or 6</TD>
       <TD style="text-align:right">2</TD>
-      <TD>Memory TBD</TD>
-      <TD>TBD<BR> (SSD)</TD>
+      <TD> style="text-align:center"10 GB<BR>(4GB/vCPU)<BR>(2GB for OS)</TD>
+      <TD> style="text-align:center">100 GB<BR> (SSD)</TD>
      <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
   <TR>
       <TD>mongos</TD>
       <TD>mongos-router-n</TD>
       <TD style="text-align:center">2</TD>
-      <TD>Cores TBD</TD>
-      <TD>Memory TBD</TD>
+      <TD style="text-align:center">1</TD>
+      <TD>3 GB<BR>(1GB/vCPU)<BR>(2GB for OS)</TD>
       <TD style="text-align:center">20 GB<BR>(HDD)</TD>
      <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
