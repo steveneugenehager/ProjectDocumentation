@@ -46,19 +46,19 @@ table, th, td {
       <TD>Config Server Replica Set</TD>
       <TD>mongo-config-server-n</TD>
       <TD>3</TD>
-      <TD>1</TD>
-      <TD>2 GB</TD>
-      <TD>TBD<BR>(SSD)</TD> 
-      <TD>Needed Software TBD  MongoDB all or part?</TD>
+      <TD style="text-align:right">1</TD>
+<TD style="text-align:right">2 GB</TD>
+    <TD>TBD<BR>(SSD)</TD> 
+     <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
       <TR>
       <TD>Data Nodes</TD>
       <TD>mongo-data-node-n</TD>
       <TD>2 or 3 per shard<BR>Planning 2 shards<BR>4 or 6</TD>
-      <TD>1</TD>
+      <TD style="text-align:right">2</TD>
       <TD>Memory TBD</TD>
       <TD>TBD<BR> (SSD)</TD>
-      <TD>Needed Software TBD MongoDB and?</TD> 
+     <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
   <TR>
       <TD>mongos</TD>
@@ -67,25 +67,25 @@ table, th, td {
       <TD>Cores TBD</TD>
       <TD>Memory TBD</TD>
       <TD>Disk Size TBD<br>HDD</TD>
-      <TD>Needed Software TBD  MongoDB all or part?</TD>
+     <TD>mongodb-org (meta package)<BR>gnupg and curl</TD>
     </TR>
      <TR>
       <TD>Data Producer(s)</TD>
       <TD>mongo-test-producer-node-n</TD>
       <TD>1 to ...</TD>
-      <TD>1</TD>
-      <TD>2 GB</TD>
+      <TD style="text-align:right">1</TD>
+      <TD style="text-align:right">2 GB</TD>
       <TD>Disk Size TBD<br> (HDD)</TD>
       <TD>Needed Software TBDMongoDB client or part?<BR>Project Code Repository</TD>
     </TR>
          <TR>
       <TD>Data Consumer(s)</TD>
       <TD>mongo-test-client-node-n</TD>
-      <TD>1 to ...</TD>
-      <TD>1</TD>
-      <TD>2 GB</TD>
-      <TD>Disk Size TBD<break>(HDD)</TD>
-      <TD>Needed Software TBDMongoDB client or part?<BR>Project Code Repository</TD>
+      <TD style="text-align:center">1 to ...</TD>
+      <TD style="text-align:right">1</TD>
+<TD style="text-align:right">2 GB</TD>
+           <TD>Disk Size TBD<break>(HDD)</TD>
+      <TD>pymongo<BR>Project Code Repository</TD>
     </TR>
     
   </TABLE>
