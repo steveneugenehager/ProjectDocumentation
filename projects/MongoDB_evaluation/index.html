@@ -89,5 +89,12 @@ table, th, td {
     </TR>
     
   </TABLE>
+
+    <P><H2>To Consider</H2></P>
+    <UL>
+      <LI>Monitor Memory Usage across the MongoDB cluster's VMs - Monitoring memory usage across a group of servers in GCP requires two main steps: installing the Ops Agent on your VMs to collect the OS-level memory metrics and then creating a custom dashboard in Cloud Monitoring to visualize the aggregated data.
+      </LI>
+      <LI>VM / Resource - Labels - Ensure there are tags for the project and the various VM roles upon VM build in Terraform.  I will need to be able to monitor CPU and memory for groups of servers in the various roles.</LI>
+    </UL>
     </BODY>
 </HTML>
